@@ -1,4 +1,10 @@
 public class OldMain {
+
+
+    // Ich weiß, dass das sehr sehr hässlich ist, aber ich wollte es einfach drin haben,
+    // damit ich sehen kann, wie wirklich schlechter Code aussehen kann. :D
+
+
     /*
     public class Main {
         public static void main(String[] args) {

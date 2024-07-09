@@ -7,10 +7,11 @@ public class Input {
     protected int age;
     protected boolean ageCorrect;
 
+    // Hello message and the first Method called after the main.
     public void startInput() {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Moin! Willkommen zu meinem BMI-Rechner!");
     }
+    // AgeInput
     public void ageInput() {
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Bitte gebe als nächstes dein Alter (16 - 90) an.");
@@ -21,6 +22,7 @@ public class Input {
             age = scanner.nextInt();
         }
     }
+    // GenderInput
     public void genderInput() {
         java.util.Scanner scanner = new java.util.Scanner(System.in);
             System.out.println("Bitte gebe jetzt dein Geschlecht an. Die Zahl 1 wenn du maennlich, und die Zahl 2 falls du weiblich bist.");
@@ -31,12 +33,14 @@ public class Input {
                 isWoman = true;
         }
     }
+    // WeightInput
     public void weightInput() {
             java.util.Scanner scanner = new java.util.Scanner(System.in);
             System.out.println("Gebe nun bitte dein Körpergewicht in KG an, nutze bei einer Dezimalzahl bitte einen Punkt statt Kommata.");
             String weightInput = scanner.nextLine();
             this.weightInput = Double.parseDouble(weightInput);
     }
+    // HeightInput
     public void heightInput() {
             java.util.Scanner scanner = new java.util.Scanner(System.in);
             System.out.println("Gebe nun bitte deine Körpergröße in Meter an. Ersetzte ebenfalls bitte das Kommata gegen einen Punkt.");
