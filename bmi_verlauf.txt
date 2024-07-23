@@ -1,0 +1,2 @@
+Name: Gurtaj, Alter: 20, Größe: 1.93m, Gewicht: 104.0kg, BMI-Index: 27.92
+Name: Orhan, Alter: 20, Größe: 1.84m, Gewicht: 87.0kg, BMI-Index: 25.7

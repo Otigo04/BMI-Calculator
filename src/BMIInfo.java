@@ -1,4 +1,4 @@
-public class BMIInfo extends Input {
+public class BMIInfo {
     double lowerBound, upperBound;
     String message;
     // THE CONSTRUCTOR FOR THE 2D ARRAYS
