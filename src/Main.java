@@ -7,20 +7,26 @@ public class Main {
         BMICalc calc = new BMICalc();
         Input inputs = new Input(calc); // Übergibt die BMICalc-Instanz an Input
 
+        // Methodenaufrufe
+        inputs.borderPrinter();
         inputs.startInput();
+        inputs.borderPrinter();
         inputs.ageInput();
+        inputs.borderPrinter();
         inputs.genderInput();
+        inputs.borderPrinter();
         inputs.weightInput();
+        inputs.borderPrinter();
         inputs.heightInput();
+        inputs.borderPrinter();
+        inputs.saveDataWithConsent();
+        inputs.borderPrinter();
 
         // Berechne den BMI
         calc.calculator(inputs.weightInput, inputs.heightInput);
 
         // Debug-Ausgabe
         System.out.print("Aktueller BMI-Index: " + calc.getBMIResult());
-
-        // Daten speichern
-        saveFile(inputs);
 
         int[] ageRanges = {24, 34, 44, 54, 64, 90}; // Age Ranges
 
@@ -74,7 +80,14 @@ public class Main {
         }
 
         for (BMIInfo info : bmiInfos) {
-            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound) {
+            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && inputs.saveDataWithConsent) {
+                inputs.setBmiInfo(info); // Speichert das passende BMIInfo-Objekt in Input
+                System.out.print(", " + info.message + ", \nDeine Eingabe wurde in der Datei bmi_verlauf.txt gespeichert!");
+                // Daten speichern
+                saveFile(inputs);
+                break;
+            }
+            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && !inputs.saveDataWithConsent) {
                 System.out.print(", " + info.message);
                 break;
             }

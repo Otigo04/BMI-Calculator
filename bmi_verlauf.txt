@@ -1,2 +1,23 @@
 Name: Gurtaj, Alter: 20, Größe: 1.93m, Gewicht: 104.0kg, BMI-Index: 27.92
 Name: Orhan, Alter: 20, Größe: 1.84m, Gewicht: 87.0kg, BMI-Index: 25.7
+Name: Eyyub, Alter: 21, Größe: 1.87m, Gewicht: 85.0kg, BMI-Index: 24.31
+Name: Max, Alter: 19, Größe: 1.78m, Gewicht: 75.0kg, BMI-Index: 23.67
+Name: Fevzi, Alter: 20, Größe: 5.0m, Gewicht: 180.0kg, BMI-Index: 7.2
+Name: Orhan, Alter: 20, Größe: 1.84m, Gewicht: 86.0kg, BMI-Index: 25.4
+Name: Ulrich, Alter: 86, Größe: 1.89m, Gewicht: 99.0kg, BMI-Index: 27.71
+Name: Rudolfa, Alter: 28, Größe: 1.69m, Gewicht: 78.0kg, BMI-Index: 27.31
+Name: Discord, Alter: 40, Größe: 1.0m, Gewicht: 1.9kg, BMI-Index: 1.9
+Name: Orhan, Alter: 20, Größe: 1.9m, Gewicht: 90.0kg, BMI-Index: 24.93
+Name: Orhan, Alter: 20, Größe: 1.0m, Gewicht: 90.0kg, BMI-Index: 90.0
+Name: Orhan, Alter: 20, Größe: 2.0m, Gewicht: 90.0kg, BMI-Index: 22.5
+Name: Ilhanuss, Alter: 17, Größe: 1.83m, Gewicht: 98.0kg, BMI-Index: 29.26
+Name: Otunga, Alter: 90, Größe: 4.0m, Gewicht: 200.0kg, BMI-Index: 12.5, Datum: 25.07.2024 02:03:53
+25.07.2024 02:05:25: Name: Ulrich, Alter: 90, Größe: 3.0m, Gewicht: 99.0kg, BMI-Index: 11.0
+25.07.2024 02:06:27:       Person: Otunga, Alter: 20, Größe: 2.0m, Gewicht: 90.0kg, BMI-Index: 22.5
+Datum: 25.07.2024 02:26:00 Person: ia, Alter: 22, Größe: 2.0m, Gewicht: 90.0kg, BMI-Index: 22.5 , Bewertung: Das ist dein Normalgewicht! Herzlichen Glückwunsch!
+Datum: 25.07.2024 02:27:46 Person: IIs, Alter: 90, Größe: 1.0m, Gewicht: 9999.0kg, BMI-Index: 9999.0 , Bewertung: Das ist dein Normalgewicht! Herzlichen Glückwunsch!
+Datum: 25.07.2024 02:28:38 Person: asd, Alter: 22, Größe: 1.0m, Gewicht: 2222.0kg, BMI-Index: 2222.0 , Bewertung: 
+Datum: 25.07.2024 02:38:24 Person: OTUNGAAA, Alter: 20, Größe: 2.0m, Gewicht: 90.0kg, BMI-Index: 22.5 , Bewertung: Das ist dein Normalgewicht! Herzlichen Glückwunsch!
+Datum: 25.07.2024 02:38:39 Person: iaia, Alter: 20, Größe: 2.0m, Gewicht: 99999.0kg, BMI-Index: 24999.75 , Bewertung: Du bist übergewichtig!
+Datum: 25.07.2024 02:39:39 | Person: USUS | Alter: 20 | Größe: 2.0m | Gewicht: 280.0kg | BMI-Index: 70.0 | Bewertung: Du bist übergewichtig!
+Datum: 25.07.2024 02:43:12 | Person: asd | Alter: 22 | Größe: 4.0m | Gewicht: 89.0kg | BMI-Index: 5.56 | Bewertung: Du bist untergewichtig!

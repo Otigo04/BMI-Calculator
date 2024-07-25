@@ -7,4 +7,8 @@ public class BMIInfo {
         this.upperBound = upperBound;
         this.message = message;
     }
+
+    public String getMessage() {
+        return message;
+    }
 }

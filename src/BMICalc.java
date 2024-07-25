@@ -11,4 +11,6 @@ public class BMICalc {
     public double getBMIResult() {
         return bmiResultGerundet;
     }
+
+
 }
