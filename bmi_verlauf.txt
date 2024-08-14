@@ -1,0 +1,9 @@
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 14.08.2024 20:10:19 Person: Igel, Alter: 22, Größe: 2.0m, Gewicht: 90.0kg, BMI-Index: 22.5 , Bewertung: Das ist dein Normalgewicht! Herzlichen Glückwunsch!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als der Durchschnittsmann.
+Du wiegst mehr als der Durchschnittsmann.
+Du hast ein gesundes Gewicht! Behalte einen aktiven und gesunden Lebensstil bei.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!

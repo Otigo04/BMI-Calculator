@@ -5,32 +5,17 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         BMICalc calc = new BMICalc();
-        Input inputs = new Input(calc); // Übergibt die BMICalc-Instanz an Input
-
-        // Methodenaufrufe
-        inputs.borderPrinter();
-        inputs.startInput();
-        inputs.borderPrinter();
-        inputs.ageInput();
-        inputs.borderPrinter();
-        inputs.genderInput();
-        inputs.borderPrinter();
-        inputs.weightInput();
-        inputs.borderPrinter();
-        inputs.heightInput();
-        inputs.borderPrinter();
-        inputs.saveDataWithConsent();
-        inputs.borderPrinter();
+        Input inputs = getInput(calc);
 
         // Berechne den BMI
         calc.calculator(inputs.weightInput, inputs.heightInput);
 
-        // Debug-Ausgabe
+        // Ausgabe des BMI-Indexes
         System.out.print("Aktueller BMI-Index: " + calc.getBMIResult());
 
-        int[] ageRanges = {24, 34, 44, 54, 64, 90}; // Age Ranges
+        int[] ageRanges = {24, 34, 44, 54, 64, 90}; // Alter
 
-        // 2D Arrays holding Info
+        // 2D Arrays mit Informationen
         BMIInfo[][] bmiInfoMen = {
                 {
                         new BMIInfo(Double.NEGATIVE_INFINITY, 19, "Du bist untergewichtig!"),
@@ -46,6 +31,27 @@ public class Main {
                 }
         };
 
+        BMIInfo[] bmiInfos = getBmiInfos(ageRanges, inputs, bmiInfoMen);
+
+        for (BMIInfo info : bmiInfos) {
+            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && inputs.saveDataWithConsent) {
+                inputs.setBmiInfo(info); // Speichert das passende BMIInfo-Objekt in Input
+                System.out.print(", " + info.message + ", \nDeine Eingabe wurde in der Datei bmi_verlauf.txt gespeichert!\n");
+                // Daten speichern
+                saveFile(inputs);
+                break;
+            }
+            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && !inputs.saveDataWithConsent) {
+                System.out.print(", " + info.message); // Gibt das "Ergebnis" aus (Nachricht)
+                break;
+            }
+        }
+        // Zusatzinfos herausgeben
+        System.out.println(inputs.compareWithAverage(inputs.heightInput, inputs.weightInput));
+        System.out.println(inputs.evaluateHealthBasedOnBMI(calc.getBMIResult()));
+    }
+        // Getter für BMI-Infos basierend auf BMI-Wert
+    private static BMIInfo[] getBmiInfos(int[] ageRanges, Input inputs, BMIInfo[][] bmiInfoMen) {
         BMIInfo[][] bmiInfoWomen = {
                 {
                         new BMIInfo(Double.NEGATIVE_INFINITY, 18, "Du bist untergewichtig!"),
@@ -78,28 +84,37 @@ public class Main {
         } else {
             bmiInfos = bmiInfoWomen[ageIndex];
         }
-
-        for (BMIInfo info : bmiInfos) {
-            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && inputs.saveDataWithConsent) {
-                inputs.setBmiInfo(info); // Speichert das passende BMIInfo-Objekt in Input
-                System.out.print(", " + info.message + ", \nDeine Eingabe wurde in der Datei bmi_verlauf.txt gespeichert!");
-                // Daten speichern
-                saveFile(inputs);
-                break;
-            }
-            if (calc.getBMIResult() >= info.lowerBound && calc.getBMIResult() < info.upperBound && !inputs.saveDataWithConsent) {
-                System.out.print(", " + info.message);
-                break;
-            }
-        }
+        return bmiInfos;
     }
 
-        public static void saveFile(Input input) {
-            String fileName = "bmi_verlauf.txt";
+    private static Input getInput(BMICalc calc) {
+        Input inputs = new Input(calc); // Übergibt die BMICalc-Instanz an Input
 
+        // Methodenaufrufe
+        inputs.borderPrinter();
+        inputs.startInput();
+        inputs.borderPrinter();
+        inputs.ageInput();
+        inputs.borderPrinter();
+        inputs.genderInput();
+        inputs.borderPrinter();
+        inputs.weightInput();
+        inputs.borderPrinter();
+        inputs.heightInput();
+        inputs.borderPrinter();
+        inputs.saveDataWithConsent();
+        inputs.borderPrinter();
+        return inputs;
+    }
+
+
+    public static void saveFile(Input input) {
+            String fileName = "bmi_verlauf.txt";
+            // Schreibt das Ergebnis in die .txt Datei
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
-                writer.write(input.toString() + "\n");
-            } catch (IOException e) {
+                writer.write(input.borderPrinterVerlauf() + input);
+                input.borderPrinter();
+            } catch (IOException e) { // Falls ein Fehler beim Schreiben der Datei auftritt, wird folgendes ausgegeben:
                 System.out.println("Ein Fehler ist beim Schreiben der Datei aufgetreten: " + e.getMessage());
             }
         }

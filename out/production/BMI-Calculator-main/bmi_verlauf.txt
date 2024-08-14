@@ -1,0 +1,18 @@
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 14.08.2024 19:58:55 Person: Ensar, Alter: 44, Größe: 22.0m, Gewicht: 22.0kg, BMI-Index: 0.05 , Bewertung: Du bist untergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als die Durchschnittsfrau.
+Du wiegst weniger als die Durchschnittsfrau.
+Du bist untergewichtig! Es könnte hilfreich sein, deine Ernährung und Lebensweise zu überprüfen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 14.08.2024 20:04:58 Person: Iut, Alter: 34, Größe: 2.0m, Gewicht: 55.0kg, BMI-Index: 13.75 , Bewertung: Du bist untergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als die Durchschnittsfrau.
+Du wiegst weniger als die Durchschnittsfrau.
+Du bist untergewichtig! Es könnte hilfreich sein, deine Ernährung und Lebensweise zu überprüfen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!

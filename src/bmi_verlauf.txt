@@ -1,0 +1,2 @@
+Datum: 13.08.2024 22:44:54 | Person: Orhan | Alter: 20 | Größe: 1.85m | Gewicht: 87.0kg | BMI-Index: 25.42 | Bewertung: Du leidest an leichtem Übergewicht!
+Datum: 13.08.2024 22:48:45 | Person: sadsd | Alter: 22 | Größe: 2.0m | Gewicht: 222.0kg | BMI-Index: 55.5 | Bewertung: Du bist übergewichtig!
