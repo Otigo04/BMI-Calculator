@@ -6,23 +6,23 @@ Durch Eingaben des Nutzers berechnet das Programm den BMI und gibt zusätzliche 
 Du kannst das Programm in 3 verschiedenen Wegen ausführen:
 
 --- Weg 1 ---
-Ganz einfach mit IntelliJ
-Öffne hierzu einfach das Projekt in deinem IntelliJ und führe das Programm in der Main aus.
+- Ganz einfach mit IntelliJ -
+- Öffne hierzu einfach das Projekt in deinem IntelliJ und führe das Programm in der Main aus. -
 -
 ![6](https://github.com/user-attachments/assets/3017b07e-4afc-4b26-8797-23a595f6611a)
 -
-Dann kannst du mit Konsolenbefehlen arbeiten.
-Kleiner Teaser:
+- Dann kannst du mit Konsolenbefehlen arbeiten. -
+- Kleiner Teaser: -
 -
 ![4](https://github.com/user-attachments/assets/9014d5fa-6430-4ed3-95e9-d58d5751644a)
 -
 
 --- Weg 2 ---
-Komplierte Klassen mit dem Terminal ausführen
-Navigiere hierzu in folgendes Verzeichnis: Projekt/out/production/BMI-Calculator-main
-Rechtsklicke auf eine leere Fläche im Ordner und wähle "In Terminal öffnen"
-Nun gebe in der Befehlsoberfläche folgendes ein: java Main
-Das Programm sollte nun laufen.
+- Komplierte Klassen mit dem Terminal ausführen. -
+- Navigiere hierzu in folgendes Verzeichnis: Projekt/out/production/BMI-Calculator-main -
+- Rechtsklicke auf eine leere Fläche im Ordner und wähle "In Terminal öffnen" -
+- Nun gebe in der Befehlsoberfläche folgendes ein: java Main -
+- Das Programm sollte nun laufen. -
 -
 ![2](https://github.com/user-attachments/assets/3e50942f-deb6-47c3-9610-ad079fae0d91)
 -
@@ -31,9 +31,9 @@ Das Programm sollte nun laufen.
 
 
 --- Weg 3 ---
-Programm mit GUI öffnen (WIP)
-Du kannst das Programm auch als GUI öffnen!
-Hierfür machst du genau das gleiche wie in Weg 2, schreibst aber statt "java Main" folgendes: java BMICalculatorGUI
+- Programm mit GUI öffnen (WIP) -
+- Du kannst das Programm auch als GUI öffnen! -
+- Hierfür machst du genau das gleiche wie in Weg 2, schreibst aber statt "java Main" folgendes: java BMICalculatorGUI -
 -
 ![5](https://github.com/user-attachments/assets/cbe052d2-0927-4e98-870b-3bdde37ae83e)
 -
