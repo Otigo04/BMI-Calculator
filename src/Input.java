@@ -41,9 +41,9 @@ public class Input {
         while (true) {
             String ageInput = scanner.nextLine();
             try {
-                int age = Integer.parseInt(ageInput);
-                if (age <= 0) {
-                    System.out.println("Ungültige Eingabe! Das Alter muss eine positive Zahl sein. Versuche es erneut:");
+                age = Integer.parseInt(ageInput);
+                if (age <= 0 || age > 120) {
+                    System.out.println("Ungültige Eingabe! Das Alter muss eine positive Zahl und <= 120 sein. Versuche es erneut:");
                 } else {
                     System.out.println("Alter eingegeben: " + age); // Debug-Ausgabe
                     // Hier kannst du den Wert `age` speichern oder weiterverarbeiten.
@@ -301,7 +301,7 @@ public class Input {
             result.append("Du bist fettleibig! Eine Ernährungsumstellung und regelmäßige Bewegung werden dringend empfohlen.\n");
         }
 
-        return result + "\nDas Programm wurde erfolgreich ausgeführt und beendet!\n SEE YOU NEXT TIME! :)";
+        return result + "";
     }
 
     // Für die Ausgabe der .txt, speichert das Datum und die Uhrzeit der Eingabe mit
