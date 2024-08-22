@@ -1,0 +1,64 @@
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 11:47:10 Person: OrhanNussPrime, Alter: 33, Größe: 1.88m, Gewicht: 89.0kg, BMI-Index: 25.18 , Bewertung: Du leidest an leichtem Übergewicht!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als der Durchschnittsmann.
+Du wiegst mehr als der Durchschnittsmann.
+Du bist übergewichtig! Es könnte ratsam sein, mehr Bewegung in deinen Alltag zu integrieren.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 11:50:47 Person: Unta, Alter: 55, Größe: 2.0m, Gewicht: 89.0kg, BMI-Index: 22.25 , Bewertung: Das ist dein Normalegewicht! Herzlichen Glückwunsch!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als die Durchschnittsfrau.
+Du wiegst mehr als die Durchschnittsfrau.
+Du hast ein gesundes Gewicht! Behalte einen aktiven und gesunden Lebensstil bei.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 11:58:05 Person: Urifh, Alter: 80, Größe: 2.5m, Gewicht: 30.0kg, BMI-Index: 4.8 , Bewertung: Du bist untergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als der Durchschnittsmann.
+Du wiegst weniger als der Durchschnittsmann.
+Du bist untergewichtig! Es könnte hilfreich sein, deine Ernährung und Lebensweise zu überprüfen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 12:42:18 Person: WW, Alter: 0, Größe: 1.6m, Gewicht: 56.0kg, BMI-Index: 21.87 , Bewertung: Das ist dein Normalegewicht! Herzlichen Glückwunsch!
+
+ZUSATZINFORMATIONEN: 
+Du bist kleiner als die Durchschnittsfrau.
+Du wiegst weniger als die Durchschnittsfrau.
+Du hast ein gesundes Gewicht! Behalte einen aktiven und gesunden Lebensstil bei.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 19:06:49 Person: Igel, Alter: 0, Größe: 1.81m, Gewicht: 100.0kg, BMI-Index: 30.52 , Bewertung: Du bist übergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als der Durchschnittsmann.
+Du wiegst mehr als der Durchschnittsmann.
+Du bist fettleibig! Eine Ernährungsumstellung und regelmäßige Bewegung werden dringend empfohlen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 19:08:55 Person: ilas, Alter: 0, Größe: 2.0m, Gewicht: 45.0kg, BMI-Index: 11.25 , Bewertung: Du bist untergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als die Durchschnittsfrau.
+Du wiegst weniger als die Durchschnittsfrau.
+Du bist untergewichtig! Es könnte hilfreich sein, deine Ernährung und Lebensweise zu überprüfen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)+------------------------------------------------------------------------------------------------------------------------------------------------------+
+Datum: 22.08.2024 19:09:48 Person: aiaia, Alter: 0, Größe: 2.0m, Gewicht: 33.0kg, BMI-Index: 8.25 , Bewertung: Du bist untergewichtig!
+
+ZUSATZINFORMATIONEN: 
+Du bist größer als die Durchschnittsfrau.
+Du wiegst weniger als die Durchschnittsfrau.
+Du bist untergewichtig! Es könnte hilfreich sein, deine Ernährung und Lebensweise zu überprüfen.
+
+Das Programm wurde erfolgreich ausgeführt und beendet!
+ SEE YOU NEXT TIME! :)

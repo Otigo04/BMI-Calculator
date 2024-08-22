@@ -16,6 +16,9 @@ public class Input {
 
     public String border = "-";
     public String corner = "+";
+    public int activityLevel;
+    public double bmr;
+    public double tdee;
 
     // Konstruktor, der eine BMICalc-Instanz übergibt
     public Input(BMICalc calc) {
@@ -33,13 +36,25 @@ public class Input {
     // Methode zur Altereingabe
     public void ageInput() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hallo " + name + "! Bitte gebe als nächstes dein Alter (16 - 90) an.");
-        age = scanner.nextInt();
-        while (age > 90 || age < 16) {
-            System.out.println("Altereingabe nicht übergeben. Bitte gebe ein Alter zwischen von 16-90 an.");
-            age = scanner.nextInt();
+        System.out.println("Hallo " + name + "! Bitte gebe nun dein Alter an:");
+
+        while (true) {
+            String ageInput = scanner.nextLine();
+            try {
+                int age = Integer.parseInt(ageInput);
+                if (age <= 0) {
+                    System.out.println("Ungültige Eingabe! Das Alter muss eine positive Zahl sein. Versuche es erneut:");
+                } else {
+                    System.out.println("Alter eingegeben: " + age); // Debug-Ausgabe
+                    // Hier kannst du den Wert `age` speichern oder weiterverarbeiten.
+                    break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ungültige Eingabe! Bitte gib eine gültige Zahl ein:");
+            }
         }
     }
+
     // Methode zur Geschlechtseingabe
     public void genderInput() {
         Scanner scanner = new Scanner(System.in);
@@ -65,48 +80,133 @@ public class Input {
         System.out.println("Gebe nun bitte dein Körpergewicht in KG an, nutze bei einer Dezimalzahl bitte einen Punkt statt Komma.");
         while (true) {
             String weightInput = scanner.nextLine();
-            if (weightInput.contains(",")) {
-                System.out.println("Gewichteingabe ungültig! Bitte verwende einen Punkt anstelle eines Kommas.");
+
+            // Überprüfe auf Komma und ob die Eingabe numerisch ist
+            if (weightInput.contains(",") || isNumeric(weightInput)) {
+                System.out.println("Gewichteingabe ungültig! Versuche es erneut: ");
                 continue;
             }
 
-            // Prüfen, ob die Eingabe nur Zahlen und maximal einen Punkt enthält
-            if (!weightInput.matches("\\d+(\\.\\d+)?")) {
-                System.out.println("Gewichteingabe ungültig! Stelle sicher, dass nur Zahlen und ein Punkt verwendet werden.");
-                continue; // Zurück zum Anfang der Schleife
-            }
-                    this.weightInput = Double.parseDouble(weightInput);
-                    System.out.println("Gewicht eingegeben: " + this.weightInput + "kg"); // Debug-Ausgabe
-                    break;
-        }
+            double weight = Double.parseDouble(weightInput);
 
+            // Überprüfe ob das Gewicht in einem realistischen Bereich liegt
+            if (weight < 30 || weight > 300) {
+                System.out.println("Das Gewicht muss zwischen 30 kg und 300 kg liegen. Versuche es erneut: ");
+            } else {
+                this.weightInput = weight;
+                System.out.println("Gewicht eingegeben: " + this.weightInput + " kg");
+                break;
+            }
+        }
     }
+
     // Methode zur Größeneingabe
     public void heightInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Gebe nun bitte deine Körpergröße in Meter an. Ersetze ebenfalls bitte das Komma gegen einen Punkt.");
-
         while (true) {
             String heightInput = scanner.nextLine();
 
-            // Prüfen auf das Vorhandensein eines Kommas
-            if (heightInput.contains(",")) {
-                System.out.println("Größeneingabe ungültig! Bitte verwende einen Punkt anstelle eines Kommas.");
-                continue; // Zurück zum Anfang der Schleife
+            // Überprüfe auf Komma und ob die Eingabe numerisch ist
+            if (heightInput.contains(",") || isNumeric(heightInput)) {
+                System.out.println("Größeingabe ungültig! Versuche es erneut: ");
+                continue;
             }
 
-            // Prüfen, ob die Eingabe nur Zahlen und maximal einen Punkt enthält
-            if (!heightInput.matches("\\d+(\\.\\d+)?")) {
-                System.out.println("Größeneingabe ungültig! Stelle sicher, dass nur Zahlen und ein Punkt verwendet werden.");
-                continue; // Zurück zum Anfang der Schleife
-            }
+            double height = Double.parseDouble(heightInput);
 
-            // Wenn die Eingabe gültig ist, wird sie in eine Zahl umgewandelt
-            this.heightInput = Double.parseDouble(heightInput);
-            System.out.println("Größe eingegeben: " + this.heightInput + "m"); // Debug-Ausgabe
-            break; // Schleife beenden, da die Eingabe gültig ist
+            // Überprüfe ob die Größe in einem realistischen Bereich liegt
+            if (height < 1.0 || height > 2.5) {
+                System.out.println("Die Körpergröße muss zwischen 1.0 m und 2.5 m liegen. Versuche es erneut: ");
+            } else {
+                this.heightInput = height;
+                System.out.println("Größe eingegeben: " + this.heightInput + " m");
+                break;
+            }
         }
     }
+    public boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return false;
+        } catch (NumberFormatException e) {
+            return true;
+        }
+    }
+
+    // Berechne und gebe den Kalorienbedarf aus
+    public void calculateAndDisplayCalorieNeeds(double weight, double height, boolean isMan) {
+        activityLevel = askActivityLevel();  // Den Nutzer nach seinem Aktivitätsgrad fragen
+
+        // Grundumsatz (BMR) Berechnen
+        if (isMan) {
+            bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+        } else {
+            bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+        }
+
+        // Gesamtenergiebedarf (TDEE) Berechnen
+        tdee = bmr * getActivityMultiplier(activityLevel);
+
+    }
+
+    public int askActivityLevel() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bitte wähle dein Aktivitätslevel aus den folgenden Optionen:");
+        System.out.println("1. Sehr wenig aktiv (Büroarbeit, wenig Bewegung)");
+        System.out.println("2. Leicht aktiv (leichte Bewegung/Sport 1-3 Tage/Woche)");
+        System.out.println("3. Mäßig aktiv (mäßiger Sport 3-5 Tage/Woche)");
+        System.out.println("4. Sehr aktiv (harter Sport 6-7 Tage/Woche)");
+        System.out.println("5. Extrem aktiv (sehr harter Sport, körperliche Arbeit)");
+
+        while (true) {
+            System.out.print("Gib die Nummer ein, die deinem Aktivitätsgrad am besten entspricht: ");
+            String input = scanner.nextLine();
+            try {
+                int activityLevel = Integer.parseInt(input);
+                if (activityLevel >= 1 && activityLevel <= 5) {
+                    return activityLevel;
+                } else {
+                    System.out.println("Ungültige Eingabe. Bitte wähle eine Zahl zwischen 1 und 5.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ungültige Eingabe. Bitte gib eine gültige Zahl ein.");
+            }
+        }
+    }
+
+    // Bestimme den Aktivitätsfaktor basierend auf dem Aktivitätslevel
+    private double getActivityMultiplier(int activityLevel) {
+        switch (activityLevel) {
+            case 1: return 1.2;
+            case 2: return 1.375;
+            case 3: return 1.55;
+            case 4: return 1.725;
+            case 5: return 1.9;
+            default: return 1.2;
+        }
+    }
+    // Methode zur Ausgabe von Empfehlungen
+    public void displayRecommendations() {
+        System.out.println("Empfehlungen basierend auf deinem BMI:");
+
+        if (calc.bmiResultGerundet < 18.5) {
+            System.out.println("Du bist untergewichtig. Es wäre ratsam, eine ausgewogene Ernährung mit höherem Kaloriengehalt zu verfolgen und sicherzustellen, dass du genügend Nährstoffe bekommst.");
+        } else if (calc.bmiResultGerundet >= 18.5 && calc.bmiResultGerundet < 24.9) {
+            System.out.println("Du hast ein gesundes Gewicht. Weiter so! Eine ausgewogene Ernährung und regelmäßige Bewegung helfen, dieses Gewicht zu halten.");
+        } else if (calc.bmiResultGerundet >= 25 && calc.bmiResultGerundet < 29.9) {
+            System.out.println("Du bist übergewichtig. Es wäre sinnvoll, auf deine Ernährung zu achten und regelmäßige körperliche Aktivität in deinen Alltag zu integrieren.");
+        } else if (calc.bmiResultGerundet >= 30) {
+            System.out.println("Du bist fettleibig. Es ist wichtig, mit einem Arzt über mögliche gesundheitliche Risiken zu sprechen und einen Plan zur Gewichtskontrolle zu entwickeln.");
+        }
+    }
+
+    public void calPrinter() {
+        // Methode zum Ergebnisse ausgeben (Kalorien)
+        System.out.println("KALORIENINFOS: \nDein Grundumsatz (BMR) beträgt: " + Math.round(bmr) + " Kalorien pro Tag.");
+        System.out.println("Dein Gesamtenergiebedarf (TDEE) beträgt: " + Math.round(tdee) + " Kalorien pro Tag basierend auf deinem Aktivitätsniveau.");
+    }
+
 
     // Diese Methode holt sich die Einverständnis des Nutzers zum Speichern der Werte
     public void saveDataWithConsent() {
@@ -118,12 +218,10 @@ public class Input {
 
             if (consentInput.equalsIgnoreCase("ja")) {
                 saveDataWithConsent = true;
-                borderPrinter();
                 System.out.println("Alles klar! Deine Angaben werden auf einer lokalen .txt Datei gespeichert!");
                 break;
             } else if (consentInput.equalsIgnoreCase("nein")) {
                 saveDataWithConsent = false;
-                borderPrinter();
                 System.out.println("Alles klar! Deine Angaben werden NICHT gespeichert!");
                 break;
             }
@@ -203,9 +301,8 @@ public class Input {
             result.append("Du bist fettleibig! Eine Ernährungsumstellung und regelmäßige Bewegung werden dringend empfohlen.\n");
         }
 
-        return result + "\nDas Programm wurde erfolgreich ausgeführt und beendet!\n";
+        return result + "\nDas Programm wurde erfolgreich ausgeführt und beendet!\n SEE YOU NEXT TIME! :)";
     }
-
 
     // Für die Ausgabe der .txt, speichert das Datum und die Uhrzeit der Eingabe mit
     LocalDateTime aktuelleZeit = LocalDateTime.now();

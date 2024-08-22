@@ -90,7 +90,7 @@ public class Main {
     private static Input getInput(BMICalc calc) {
         Input inputs = new Input(calc); // Übergibt die BMICalc-Instanz an Input
 
-        // Methodenaufrufe
+        // Methodenaufrufe der Input-Klasse
         inputs.borderPrinter();
         inputs.startInput();
         inputs.borderPrinter();
@@ -102,13 +102,18 @@ public class Main {
         inputs.borderPrinter();
         inputs.heightInput();
         inputs.borderPrinter();
+        inputs.calculateAndDisplayCalorieNeeds(inputs.weightInput, inputs.heightInput, inputs.isMan);
+        inputs.borderPrinter();
         inputs.saveDataWithConsent();
+        inputs.borderPrinter();
+        inputs.displayRecommendations();
+        inputs.calPrinter();
         inputs.borderPrinter();
         return inputs;
     }
 
 
-    public static void saveFile(Input input) {
+    public static void saveFile(Input input) { // Methode zum Speichern der Daten
             String fileName = "bmi_verlauf.txt";
             // Schreibt das Ergebnis in die .txt Datei
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
@@ -118,4 +123,5 @@ public class Main {
                 System.out.println("Ein Fehler ist beim Schreiben der Datei aufgetreten: " + e.getMessage());
             }
         }
+
     }
