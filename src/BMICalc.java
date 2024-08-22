@@ -35,7 +35,5 @@ public class BMICalc {
         }
         System.out.println(scale);
         System.out.println("BMI: " + bmi);
-
-        System.out.println("\nDas Programm wurde erfolgreich ausgeführt und beendet!\n SEE YOU NEXT TIME! :)");
     }
 }

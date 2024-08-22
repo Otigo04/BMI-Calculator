@@ -109,6 +109,8 @@ public class Main {
         inputs.displayRecommendations();
         inputs.calPrinter();
         inputs.borderPrinter();
+        inputs.byeByeMessage();
+        inputs.borderPrinter();
         return inputs;
     }
 

@@ -322,5 +322,9 @@ public class Input {
                 + averageComparison + "\n" + healthEvaluation;
     }
 
+    public void byeByeMessage() {
+        System.out.println("Das Programm wurde erfolgreich ausgeführt und beendet!\n SEE YOU NEXT TIME! :)");
+    }
+
 
 }
