@@ -42,7 +42,7 @@ Du kannst das Programm in 3 verschiedenen Wegen ausführen:
 ![1](https://github.com/user-attachments/assets/7d2ee80b-6da2-4ad1-9ee5-9bcbda138b39)
 -
 
-- Je nachdem, ob du deine Daten lokal gespeichert haben wolltest oder nicht, werden bei Zustimmung diese auf einer lokalen Datei auf dem Ordner gespeichert. In IntelliJ im Projekt\src\bmi_verlauf.txt, im Terminal in Projekt\out\production\BMI-Calculator-main\bmi_verlauf.txt
+- Je nachdem, ob du deine Daten lokal gespeichert haben wolltest oder nicht, werden bei Zustimmung diese auf einer lokalen Datei auf dem Ordner gespeichert. In IntelliJ im Projekt\bmi_verlauf.txt, im Terminal in Projekt\out\production\BMI-Calculator-main\bmi_verlauf.txt
 
 ----------------------------------------------
 
