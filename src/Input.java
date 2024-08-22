@@ -301,7 +301,8 @@ public class Input {
             result.append("Du bist fettleibig! Eine Ernährungsumstellung und regelmäßige Bewegung werden dringend empfohlen.\n");
         }
 
-        return result + "";
+        return result + "\nDas Programm wurde erfolgreich ausgeführt und beendet!\n";
+
     }
 
     // Für die Ausgabe der .txt, speichert das Datum und die Uhrzeit der Eingabe mit
@@ -322,9 +323,6 @@ public class Input {
                 + averageComparison + "\n" + healthEvaluation;
     }
 
-    public void byeByeMessage() {
-        System.out.println("Das Programm wurde erfolgreich ausgeführt und beendet!\n SEE YOU NEXT TIME! :)");
-    }
 
 
 }
