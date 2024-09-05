@@ -21,7 +21,8 @@ Du kannst das Programm in 3 verschiedenen Wegen ausführen:
 - Komplierte Klassen mit dem Terminal ausführen. 
 - Navigiere hierzu in folgendes Verzeichnis: Projekt/out/production/BMI-Calculator-main 
 - Rechtsklicke auf eine leere Fläche im Ordner und wähle "In Terminal öffnen" 
-- Nun gebe in der Befehlsoberfläche folgendes ein: java Main 
+- Nun gebe in der Befehlsoberfläche folgendes ein: java Main
+- HINWEIS: Hierfür musst du die Java JDK installieren!
 - Das Programm sollte nun laufen. 
 
 ![2](https://github.com/user-attachments/assets/3e50942f-deb6-47c3-9610-ad079fae0d91)
