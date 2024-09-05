@@ -3,8 +3,8 @@ Durch Eingaben des Nutzers berechnet das Programm den BMI und gibt zusätzliche 
 
 ----- How to use -----
 
+Als erstes musst du das Programm natürlich herunterladen.
 Du kannst das Programm in 3 verschiedenen Wegen ausführen:
-Vorerst musst du das Programm natürlich herunterladen.
 
 --- Weg 1 ---
 - Ganz einfach mit IntelliJ 
